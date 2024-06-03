@@ -15,6 +15,7 @@ export interface React360ViewerProps {
   imagesCount: number;
   imagesBaseUrl: string;
   imagesFiletype: string;
+  imageIndexSeparator?: string;
   imageFilenamePrefix: string;
   imageInitialIndex?: number;
   mouseDragSpeed?: number;
@@ -60,6 +61,7 @@ const StyledDiv = styled.div<StyleProps>`
 export const React360Viewer = ({
   imagesCount,
   imagesBaseUrl,
+  imageIndexSeparator,
   imagesFiletype,
   imageFilenamePrefix,
   mouseDragSpeed = 20,
@@ -134,10 +136,18 @@ export const React360Viewer = ({
   };
 
   useEffect(() => {
+    let baseUrl;
     function createImageSources() {
-      let baseUrl = imagesBaseUrl.endsWith("/")
+      if(imageIndexSeparator !== undefined) {
+        baseUrl = imagesBaseUrl + imageIndexSeparator;
+      } else {
+        baseUrl = imagesBaseUrl.endsWith("/") 
         ? imagesBaseUrl
         : imagesBaseUrl + "/";
+      }
+      // let baseUrl = imagesBaseUrl.endsWith("/") 
+      //   ? imagesBaseUrl
+      //   : imagesBaseUrl + "/";
       let srces = [];
       let fileType = imagesFiletype.replace(".", "");
       for (let i = 1; i <= imagesCount; i++) {
