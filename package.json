@@ -1,5 +1,5 @@
 {
-  "name": "react-360-product-viewer",
+  "name": "react-360-product-viewer-BX-Fork",
   "version": "0.2.5",
   "description": "Showcase your products in this 360 viewer component.",
   "main": "dist/index.js",
@@ -16,7 +16,7 @@
   "keywords": [
     "react"
   ],
-  "author": "Christian Klinton",
+  "author": "Christian Klinton, Paulin Kubwira",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.24.6",
