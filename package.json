@@ -1,5 +1,5 @@
 {
-  "name": "@paulin_kubwira/react-360-product-viewer",
+  "name": "@paulin_bixlers/react-360-product-viewer",
   "version": "1.0.0",
   "description": "Showcase your products in this 360 viewer component.",
   "main": "dist/index.js",
@@ -67,5 +67,8 @@
   },
   "files": [
     "dist/*.*"
-  ]
+  ],
+  "publishConfig": {
+  "access": "public"
 }
+} 
