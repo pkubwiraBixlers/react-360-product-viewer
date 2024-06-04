@@ -128,13 +128,14 @@ _For more example and a playground please refer to [storybook](https://todilo.gi
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+
 # API
 
 | Parameter                 | Type                         | Default | Description                                                                                                                      | Example                                      |
 | ------------------------- | ---------------------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- |
 | imagesCount               | number                       | none    | Set the number of images in your sequence                                                                                        | 35                                           |
 | imageBaseUrl              | string                       | none    | Set URL from the base of your homepage                                                                                           | ./imageSeries/                               |
-| imageIndexSeparator       | string                       | /       | Set character that separates index of image and rest of image url in your namescheme                                             | ./imageSeries/                     
+| imageIndexSeparator       | string                       | /       | Set character that separates index of image and rest of image url                                                                | ./imageSeries/                     |
  |
 | imagesFileTyp             | string                       | none    | Image type (anything that can be rendered in an _img_ tag)                                                                       | png                                          |
 | imageFilenamePrefix       | string                       | none    | Add a prefix before the image number                                                                                             | shoe (if entire image filename is shoe2.png) |
@@ -152,6 +153,8 @@ _For more example and a playground please refer to [storybook](https://todilo.gi
 | notifyOnPointerDown       | function                     | not set | Pass your own function that takes x, y as arguments. Will be called when mouse or touch is pressed.                              | -                                            |
 | notifyOnPointerUp         | function                     | not set | Pass your own function that takes x, y as arguments . Will be called when mouse or touch is released.                            | -                                            |
 | notifyOnPointerMoved      | function                     | not set | Pass your own function that takes x, y as arguments . Will be called any time the mouse or touch is moved if being pressed down. |                                              |
+
+
 
 <!-- ROADMAP -->
 
