@@ -112,6 +112,7 @@ _Make sure you have a react project - otherwise use: ._
   imagesBaseUrl="./imageSeries/"
   imagesCount={YOUR_IMAGE_SERIES_COUNT_HERE}
   imagesFiletype="png"
+  imageIndexSeparator="WHATEVER_CHARACTER_SEPARATES_INDEX_IN_NAME_SCHEME" // value is "/" by default
   mouseDragSpeed={20}
 />
 ```
@@ -133,6 +134,8 @@ _For more example and a playground please refer to [storybook](https://todilo.gi
 | ------------------------- | ---------------------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- |
 | imagesCount               | number                       | none    | Set the number of images in your sequence                                                                                        | 35                                           |
 | imageBaseUrl              | string                       | none    | Set URL from the base of your homepage                                                                                           | ./imageSeries/                               |
+| imageIndexSeparator       | string                       | /       | Set character that separates index of image and rest of image url in your namescheme                                             | ./imageSeries/                     
+ |
 | imagesFileTyp             | string                       | none    | Image type (anything that can be rendered in an _img_ tag)                                                                       | png                                          |
 | imageFilenamePrefix       | string                       | none    | Add a prefix before the image number                                                                                             | shoe (if entire image filename is shoe2.png) |
 | imageInitialIndex         | number                       | 0       | Which imagenumber to show on component load                                                                                      | 10                                           |
