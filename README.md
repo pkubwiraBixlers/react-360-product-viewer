@@ -113,6 +113,7 @@ _Make sure you have a react project - otherwise use: ._
   imagesCount={YOUR_IMAGE_SERIES_COUNT_HERE}
   imagesFiletype="png"
   imageIndexSeparator="WHATEVER_CHARACTER_SEPARATES_INDEX_IN_NAME_SCHEME" // value is "/" by default
+  customRotationIcon={() => SOME JSX}
   mouseDragSpeed={20}
 />
 ```
@@ -128,14 +129,16 @@ _For more example and a playground please refer to [storybook](https://todilo.gi
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+
 # API
 
 | Parameter                 | Type                         | Default | Description                                                                                                                      | Example                                      |
 | ------------------------- | ---------------------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- |
 | imagesCount               | number                       | none    | Set the number of images in your sequence                                                                                        | 35                                           |
-| imageBaseUrl              | string                       | none    | Set URL from the base of your homepage                                                                                           | ./imageSeries/  			|    
-imageIndexSeparator  | string | / | Set character that separates index of image from rest of image url 					|  -						  |       
- imagesFileTyp             | string                       | none    | Image type (anything that can be rendered in an _img_ tag)                                                                       | png                                          |
+| imageBaseUrl              | string                       | none    | Set URL from the base of your homepage                                                                                           | ./imageSeries/  			
+| imageIndexSeparator  | string                            | /       | Set character that separates index of image from rest of image url|  -						  
+| customRotationIcon   | function returning the icon as SVG| <svg class="sc-gEvDqW jqNMgt" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 6C6.3 6 2 8.15 2 11c0 2.45 3.19 4.38 7.71 4.88l-.42.41a1 1 0 000 1.42 1 1 0 001.42 0l2-2a1 1 0 00.21-.33 1 1 0 000-.76 1 1 0 00-.21-.33l-2-2a1 1 0 00-1.42 1.42l.12.11C6 13.34 4 12 4 11c0-1.22 3.12-3 8-3s8 1.78 8 3c0 .83-1.45 2-4.21 2.6a1 1 0 00-.79 1.19 1 1 0 001.19.77c3.65-.8 5.81-2.5 5.81-4.56 0-2.85-4.3-5-10-5z"></path></svg>       | Set rotation icon that renders on startup 					|  () => SOME SVG or JSX						  
+| imagesFileTyp             | string                       | none    | Image type (anything that can be rendered in an _img_ tag)                                                                       | png                                          |
 | imageFilenamePrefix       | string                       | none    | Add a prefix before the image number                                                                                             | shoe (if entire image filename is shoe2.png) |
 | imageInitialIndex         | number                       | 0       | Which imagenumber to show on component load                                                                                      | 10                                           |
 | mouseDragSPeed            | number                       | 20      | How fast to change images when pointer moves                                                                                     | 20                                           |
@@ -151,6 +154,7 @@ imageIndexSeparator  | string | / | Set character that separates index of image 
 | notifyOnPointerDown       | function                     | not set | Pass your own function that takes x, y as arguments. Will be called when mouse or touch is pressed.                              | -                                            |
 | notifyOnPointerUp         | function                     | not set | Pass your own function that takes x, y as arguments . Will be called when mouse or touch is released.                            | -                                            |
 | notifyOnPointerMoved      | function                     | not set | Pass your own function that takes x, y as arguments . Will be called any time the mouse or touch is moved if being pressed down. |                                              |
+
 
 <!-- ROADMAP -->
 
